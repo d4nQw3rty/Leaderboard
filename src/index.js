@@ -1,14 +1,13 @@
-import _ from 'lodash';
 import './style.css';
+import scores from './modules/scores.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const scoresList = document.getElementById('scoreList');
+scores.forEach((score) => {
+  const li = document.createElement('li');
+  li.className = 'score';
+  if(score.id % 2 === 0) {
+    li.classList.add('gray-bg');    
+  }
+  li.innerHTML = ` ${score.name} : ${score.score} `;
+  scoresList.appendChild(li);
+});
