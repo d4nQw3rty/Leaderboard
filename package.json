@@ -168,6 +168,7 @@
     "eventemitter2": "^6.4.7",
     "execa": "^4.1.0",
     "execall": "^2.0.0",
+    "express": "^4.18.2",
     "extend": "^3.0.2",
     "extract-zip": "^2.0.1",
     "extsprintf": "^1.3.0",
@@ -589,6 +590,7 @@
     "wcwidth": "^1.0.1",
     "webidl-conversions": "^7.0.0",
     "webpack": "^5.74.0",
+    "webpack-dev-middleware": "^5.3.3",
     "whatwg-encoding": "^2.0.0",
     "whatwg-mimetype": "^3.0.0",
     "whatwg-url": "^11.0.0",
@@ -609,8 +611,6 @@
     "yaml": "^1.10.2",
     "yargs-parser": "^20.2.9",
     "yauzl": "^2.10.0",
-    "express": "^4.18.2",
-    "webpack-dev-middleware": "^5.3.3",
     "zwitch": "^1.0.5"
   },
   "devDependencies": {
@@ -620,7 +620,8 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-middleware": "^5.3.3"
+    "webpack-dev-middleware": "^5.3.3",
+    "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
