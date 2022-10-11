@@ -12,23 +12,19 @@
 <main class="main">
 <div class="scores-table">
     <div class="scores-table-title"><h2>Recent Scores</h2><div class="button-title"><button type="submit">Refresh</button></div></div>
-    <ul class="scores-list">
-        <li class="score">Name: 100</li>
-        <li class="score">Name: 20</li>
-        <li class="score">Name: 50</li>
-        <li class="score">Name: 78</li>
-        <li class="score">Name: 125</li>
-        <li class="score">Name: 77</li>
-        <li class="score">Name: 60</li>
+    <ul class="scores-list" id="scoreList">
+ 
     </ul>
 </div>
 <div class="scores-add">
+    <div><h2>Add your score</h2></div>
     <form action="#" method="get" class="form">
         <input type="text" name="name" placeholder="Your name" required> 
         <input type="number" name="score" placeholder="Your score" required>
-        <div><button type="submit">Submit</button></div>
+        <div class="action"><button type="submit">Submit</button></div>
     </form>
 </div>
-</main>
+</main> 
+<script  src="index.js" type="module"></script>
 </body>
 </html>
