@@ -38,6 +38,7 @@ Open folder in your code editor.
 ### Deployment
 
 run npm start
+
 ## Authors
 
 👤 **Danys Linares**
@@ -48,6 +49,10 @@ run npm start
 ## 🤝 Contributing
 
 Thank to Microverse for the opportunity to work on this project.
+
+Thanks to my coding partner [Koami](https://github.com/hopeforkoami) for the help and support.
+
+Thank to my partner [Marcos](https://github.com/MarcoOquendoC) for the help and support.
 ## Show your support
 
 Give a ⭐️ if you like this project!
