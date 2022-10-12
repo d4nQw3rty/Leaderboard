@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.leader-title {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  justify-content: space-around;
+  padding: 5% 7%;
+}
+
+.scores-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.scores-table-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.scores-add {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.button-title {
+  align-self: center;
+}
+
+.scores-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: solid 1px black;
+}
+
+.gray-bg {
+  background-color: #d3d3d3;
+}
