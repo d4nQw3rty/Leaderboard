@@ -5,22 +5,6 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
 
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: '/',
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
-
   devServer: {
     static: './dist',
   },
@@ -31,8 +15,24 @@ module.exports = {
     }),
   ],
 
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+    publicPath: '/',
+  },
+
   optimization: {
     runtimeChunk: 'single',
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
 
 };
