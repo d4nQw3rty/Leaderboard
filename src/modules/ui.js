@@ -2,18 +2,17 @@ const ui = {
 
   render(scoresData) {
     const scores = document.getElementById('scoreList');
-
-    scoresData.forEach((score) => {
-      const index = scoresData.indexOf(score) + 1;
+    scores.innerHTML = '';
+    for (let i = 0; i < scoresData.length; i += 1) {
+      const index = i + 1;
       const li = document.createElement('li');
       li.setAttribute('id', index);
-      li.className = 'score';
-      if (index % 2 === 0) {
+      if(index % 2 === 0){
         li.classList.add('gray-bg');
-      }
-      li.innerHTML = ` ${score.user} : ${score.score} `;
+      }      
+      li.innerHTML = `${scoresData[i].user}: ${scoresData[i].score}`;
       scores.appendChild(li);
-    });
+    }
   },
 };
 
