@@ -1,5 +1,8 @@
 import './style.css';
 import scores from './modules/scores.js';
+import myGame from './modules/createGame.js';
+
+myGame();
 
 const scoresList = document.getElementById('scoreList');
 scores.forEach((score) => {

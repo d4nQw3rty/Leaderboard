@@ -115,7 +115,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scores.js */ \"./src/modules/scores.js\");\n\n\n\nconst scoresList = document.getElementById('scoreList');\n_modules_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].forEach((score) => {\n  const li = document.createElement('li');\n  li.className = 'score';\n  if (score.id % 2 === 0) {\n    li.classList.add('gray-bg');\n  }\n\n  li.innerHTML = ` ${score.name} : ${score.score} `;\n  scoresList.appendChild(li);\n});\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scores.js */ \"./src/modules/scores.js\");\n/* harmony import */ var _modules_createGame_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/createGame.js */ \"./src/modules/createGame.js\");\n\r\n\r\n\r\n\r\n(0,_modules_createGame_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\r\nconst scoresList = document.getElementById('scoreList');\r\n_modules_scores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].forEach((score) => {\r\n  const li = document.createElement('li');\r\n  li.className = 'score';\r\n  if (score.id % 2 === 0) {\r\n    li.classList.add('gray-bg');\r\n  }\r\n\r\n  li.innerHTML = ` ${score.name} : ${score.score} `;\r\n  scoresList.appendChild(li);\r\n});\r\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/createGame.js":
+/*!***********************************!*\
+  !*** ./src/modules/createGame.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst myGame = async () => {\r\n    const game =  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {\r\n        method: 'POST',\r\n        body: JSON.stringify({\r\n            name: 'Easter Egg Quest',\r\n            }),\r\n        headers: {\r\n            'Content-type': 'application/json; charset=UTF-8',\r\n        },\r\n    });\r\n    const data = await game.json();\r\n    const getId = data.result.split(' ')[3];\r\n    localStorage.setItem('List', getId);\r\n    return data;    \r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myGame);\r\n\r\n   \n\n//# sourceURL=webpack://leaderboard/./src/modules/createGame.js?");
 
 /***/ }),
 
