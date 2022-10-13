@@ -11,17 +11,19 @@
     
 <main class="main">
 <div class="scores-table">
-    <div class="scores-table-title"><h2>Recent Scores</h2><div class="button-title"><button type="submit" id="refresh">Refresh</button></div></div>
+    <div class="scores-table-title"><h2>Recent Scores</h2><div class="button-title"><button type="submit" id="refresh" class="btn">Refresh</button></div></div>
+    <div class="table-ref"><span class="flex1">Position</span> <span class="flex1">Name</span><span class="flex1">Score</span></div>
     <ul class="scores-list" id="scoreList">
- 
+        <li class="listElement"><span class="flex1"></span><span class="flex1">Click Refresh</span><span class="flex1"></span></li>
+        <li class="listElement gray-bg"><span class="flex1"></span> <span class="flex1"></span><span class="flex1"></span></li>
     </ul>
 </div>
 <div class="scores-add">
     <div><h2>Add your score</h2></div>
     <form action="#" method="get" class="form" id="form">
-        <input type="text" name="name" placeholder="Your name" id="player" required> 
-        <input type="number" name="score" placeholder="Your score" id="playerScore" required>
-        <div class="action"><button type="submit">Submit</button></div>
+        <input type="text" name="name" placeholder="Your name" id="player" class='input' required> 
+        <input type="number" name="score" placeholder="Your score" id="playerScore" class='input' required>
+        <div class="action"><button type="submit" class="btn">Submit</button></div>
     </form>
 </div>
 </main> 
