@@ -11,7 +11,7 @@
 - Webpack
 ## Live Demo (if available)
 
-[Not available yet]()
+[Go Live!](https://d4nqw3rty.github.io/Leaderboard/dist/)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
