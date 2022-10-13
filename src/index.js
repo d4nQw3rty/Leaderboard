@@ -1,14 +1,27 @@
 import './style.css';
-import scores from './modules/scores.js';
+import easterEggQuest from './modules/scoresMethods.js';
+import ui from './modules/ui.js';
 
-const scoresList = document.getElementById('scoreList');
-scores.forEach((score) => {
-  const li = document.createElement('li');
-  li.className = 'score';
-  if (score.id % 2 === 0) {
-    li.classList.add('gray-bg');
-  }
+const manageData = async () => {
+  const data = await easterEggQuest.getScores();
+  const x = data.filter(
+    (x) => Number(x.score) <= 1000 && Number(x.score) >= 0,
+  );
+  x.sort((a, b) => b.score - a.score);
+  const top = x.slice(0, 1000);
+  ui.render(top);
+};
 
-  li.innerHTML = ` ${score.name} : ${score.score} `;
-  scoresList.appendChild(li);
+const form = document.getElementById('form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const user = document.getElementById('player').value;
+  const score = document.getElementById('playerScore').value;
+  easterEggQuest.addScore(user, score);
+  form.reset();
+});
+
+const refreshBtn = document.getElementById('refresh');
+refreshBtn.addEventListener('click', () => {
+  manageData();
 });
